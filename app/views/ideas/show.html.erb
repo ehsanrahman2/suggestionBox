@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Benefit</th>
+            <th>Priority</th>
+            <th>Status</th>
+			<th>Email</th>
+			<th>Supervisor Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @idea.idea_description %></td>
+            <td><%= @idea.idea_benefit %></td>
+            <td><%= @idea.priority %></td>
+			<td><%= @idea.idea_status %></td>
+            <td><%= @idea.email %></td>
+			<td><%= @idea.supervisor_email %></td>
+        </tr>
+    </tbody>
+</table>
+
+<%= link_to 'Edit', edit_idea_path(@idea) , :class => "btn btn-info" %>
+<%= link_to 'Back', ideas_path, :class => "btn btn-info" %>

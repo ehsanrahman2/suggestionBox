@@ -1,0 +1,61 @@
+<%= form_for(@idea, remote: true) do |f| %>
+  <% if @idea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+
+      <ul>
+      <% @idea.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+	<div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+							<div class="form-group">
+							<%= f.label 'Description:', class: 'col-sm-10 control-label' %>
+							<%= f.text_area :idea_description, class: 'form-control' %>
+			    			</div>
+							<div class="form-group">
+								<%= f.label 'Benefit:', class: 'col-sm-10 control-label' %>
+			    				<%= f.text_area :idea_benefit, class: 'form-control' %>
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<%= f.label 'Priority:', class: 'col-sm-10 control-label' %>
+			    						<%= f.select :priority, options_for_select(@priorities.collect {|s| [s[0].humanize, s[0]]}, selected: @idea.priority), {}, class: 'form-control' %>
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<%= f.label 'Status:', class: 'col-sm-10 control-label' %>
+			    						<%= f.select :idea_status, options_for_select(@idea_statuses.collect {|s| [s[0].humanize, s[0]]}, selected: @idea.idea_status), {}, class: 'form-control' %>
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div class="form-group">
+			    				<%= f.label 'User Email:', class: 'col-sm-10 control-label' %>
+			    				<input type="text" name="idea[email]" id="idea_email" value=<%= session[:email] %> readonly class="form-control">
+			    			</div>		    			
+			    			<div class="form-group">
+			    				<%= f.label 'Supervisor Email:', class: 'col-sm-10 control-label' %>
+			    				<input type="text" name="idea[supervisor_email]" id="idea_supervisor_email" value=<%= session[:supervisor_email] %> readonly class="form-control">
+			    			</div>			    			
+			    			<input type="submit" name="commit" value="Add/Update Idea" class="btn btn-info btn-block">
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>  
+
+<% end %>

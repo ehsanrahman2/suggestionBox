@@ -1,0 +1,71 @@
+<div>
+	<strong>CIS 658  - Project Proposal</strong><br>
+	<strong>Ehsan Rahman</strong>
+</div>
+<div>
+	<br>
+	<p>
+	"Suggestion Box" Application is a web based application, encourage employees to submit ideas and suggestions. Company can gather ideas for problems that have the highest business value with this application. Employee can express their ideas related to cost reduction, better way of increase employee productivities, idea on how to improve processes and many more.
+	<br><br>
+	<strong>Backend:</strong>
+	All data will be store at Rails sqllite database.
+	</p>
+</div>
+<div>
+	<strong>Add/Maintain Suggestions:</strong>
+	<ul>
+		<strong>Signup Screen:</strong>
+		<ul>
+			Signup screen consists of employee full name, email address, password and supervisor email address.
+			<li>User can create username and password for the application</li>
+			<li>User must enter supervisor email address for notification</li>
+		</ul>
+		<br>
+		<strong>Login:</strong>
+		<ul>
+			<li>User enters email address</li>
+			<li>User enters valid password</li>
+		</ul>
+		<br>
+		<strong>Logout:</strong>
+		<ul>
+			<li>Logout flush users credentials</li>
+			<li>Redirects to login screen</li>
+		</ul>		
+		<br>
+		<p class="text-info">Suggestion screen consists of email address, supervisor email address, idea_status,  idea_description, Idea_benifit</p>
+		<strong>General Users: </strong>
+		<ul>
+			<li>User logs in to the application using email address</li>
+			<li>User can add an idea</li>
+			<li>User can edit idea</li>
+			<li>User can delete idea</li>
+		</ul>
+		<br>
+		<strong>Supervisor: </strong>
+		<ul>
+			<li>Supervisor logs in to the application using email address</li>
+			<li>Supervisor can add an idea</li>
+			<li>Supervisor can edit idea</li>
+			<li>Supervisor can delete idea</li>
+			<li>Supervisor can view ideas for employees that he or she supervise</li>
+			<li>Supervise can accept or reject the idea</li>
+		</ul>
+	
+		<br>
+		<strong>Notification:</strong>
+		<ul>
+			<li>Application will email to user and supervisor after creation of an idea</li>
+			<li>Application will notify user for any change of the idea</li>
+		</ul>
+		<br>
+		<strong>Service:</strong>
+		<ul>
+			<li>Application expose JSON service</li>
+			<li>Service will provide list of all suggestions that are submitted by uses</li>
+			<li>Link to <a target="_blank" href="/ideas.json">RESTful Web Service</a></li>
+		</ul>
+	</ul>
+	<br>
+</div>
+

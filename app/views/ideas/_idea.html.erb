@@ -1,0 +1,28 @@
+ <% if idea == @current_idea %>
+	<div id="current_idea" class="article">
+<% else %>
+	<div class="article">
+<% end %>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Benefit</th>
+            <th>Status</th>
+			<th>Submit By</th>
+			<th>Supervisor</th>
+			<th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= idea.idea_description %></td>
+            <td><%= idea.idea_benefit %></td>
+			<td><%= idea.idea_status %></td>
+            <td><%= idea.email %></td>
+			<td><%= idea.supervisor_email %></td>
+			<td> <%= link_to image_tag("edit_icon.jpg", width: '15', height: '15', title: 'Edit'), edit_idea_path(idea), remote: true %> <%= link_to image_tag("delete_icon.jpg", width: '20', height: '20', title: 'Delete'), idea, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+        </tr>
+    </tbody>
+</table>  
+ </div>

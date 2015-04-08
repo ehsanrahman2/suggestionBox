@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idea_description: MyText
+  idea_benefit: MyText
+  priority: 1
+  idea_status: 1
+  email: MyString
+  supervisor_email: MyString
+
+two:
+  idea_description: MyText
+  idea_benefit: MyText
+  priority: 1
+  idea_status: 1
+  email: MyString
+  supervisor_email: MyString

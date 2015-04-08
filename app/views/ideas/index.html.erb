@@ -1,0 +1,16 @@
+
+<button class="btn btn-warning pull-right">
+	<%= link_to 'New Idea', new_idea_path, remote: true %>
+</button>
+
+<h1>Suggestion list</h1>
+
+<div id="ideas">
+	<%= render @ideas %>
+</div>
+
+<button class="btn btn-warning pull-right">
+	<%= link_to 'New Idea', new_idea_path, remote: true %>
+</button>
+		
+<div id="blog-form" style="display:none;"></div>
