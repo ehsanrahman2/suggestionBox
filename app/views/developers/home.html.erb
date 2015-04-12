@@ -61,9 +61,51 @@
 		<br>
 		<strong>Service:</strong>
 		<ul>
-			<li>Application expose JSON service</li>
+			<li>Application expose RESTful service for GET and POST</li>
 			<li>Service will provide list of all suggestions that are submitted by uses</li>
-			<li>Link to <a target="_blank" href="/ideas.json">RESTful Web Service</a></li>
+			<div class="alert alert-info">
+				<strong>REST API:</strong><br>
+				<strong>URL:</strong><br>
+					<ul>Link to <a target="_blank" href="/ideas.json">RESTful Web Service</a></ul><hr>
+				<strong>Resource Information:</strong><br>
+					<ul>
+						<li>Response formats: JSON</li>
+						<li>Requires authentication: Yes (user context only)</li>
+						<li>Rate limited: Yes </li>
+						<li>Requests: 15 minutes windows</li>
+					</ul><br><hr>
+				<strong>Parameters:</strong><br>
+					<ul>None</ul><hr>
+				<strong>Example Request (GET):</strong><br>
+					<ul>
+					[<br>
+						<ul>{</ul>
+							<ul>"id": 1,<br>
+								"idea_description": "Ehsan",<br>
+								"idea_benefit": "Rahman",<br>
+								"priority": "Low",<br>
+								"idea_status": "Open",<br>
+								"email": "ehsan.rahman2@gmail.com",<br>
+								"supervisor_email": "rahman_ehsan@hotmail.com",<br>
+								"url": "http://localhost:3000/ideas/1.json"<br>
+							</ul>
+						<ul>}</ul>
+					]
+					</ul><hr>
+				<strong>Example Request (POST):</strong><br>
+					<ul>{</ul>
+						<ul>"idea_description": "Ehsan",<br>
+							"idea_benefit": "Rahman",<br>
+							"priority": "Low",<br>
+							"idea_status": "Open",<br>
+							"email": "ehsan.rahman2@gmail.com",<br>
+							"supervisor_email": "rahman_ehsan@hotmail.com"<br>
+						</ul>
+					<ul>}</ul>
+					<hr>
+			</div>
+			
+			
 		</ul>
 	</ul>
 	<br>
